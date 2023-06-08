@@ -52,9 +52,9 @@ h1 {
 #contenedor-productos {
     max-width: 1200px;
     margin: 60px auto;
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 20px;
 }
 
 p {
@@ -62,11 +62,10 @@ p {
 }
 
 .producto {
-    max-width: 20%;
     padding: 10px;
-    margin: 10px;
     margin-bottom: 20px;
     box-shadow: 2px 6px 3px 3px rgba(0, 0, 0, 0.3);
+    background-color: white;
 }
 
 .precioProducto {
@@ -80,19 +79,17 @@ p {
     font-weight: 700;
     padding: 5px;
     border: none;
-}
-
-.boton-agregar:hover {
     cursor: pointer;
 }
 
-.boton-agregar:focus {
-    outline: none;
+.boton-agregar:hover {
+    background-color: #1f272a;
 }
 
 .modal-contenedor {
     position: fixed;
     top: 0;
+    left: 0;
     width: 100%;
     height: 100vh;
     background-color: rgba(0, 0, 0, 0.3);
@@ -147,34 +144,45 @@ p {
 
 .modal-carrito .precioProducto {
     padding-top: 10px;
-
 }
 
-.productoEnCarrito {
-    border-left: 5px solid lightblue;
-    border-bottom-left-radius: 3px;
-    border-top-left-radius: 3px;
-    margin: 5px 0;
-    padding: 5px 10px;
-    display: flex;
-    justify-content: space-between;
+@media only screen and (max-width: 768px) {
+    header {
+        padding: 20px 5%;
+    }
+
+    h1 {
+        font-size: 36px;
+    }
+
+    #contenedor-productos {
+        margin: 30px auto;
+    }
+
+    .producto {
+        max-width: 45%;
+    }
 }
 
-.productoEnCarrito:hover {
-    border-left: 5px solid #31393c;
+@media only screen and (max-width: 480px) {
+    .producto {
+        max-width: 100%;
+    }
 }
 
-.boton-eliminar {
+.container {
+    margin-bottom: 20px;
+  }
+  
+  #filtroTalle {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
     background-color: white;
-    color: red;
-    border: none;
-    font-size: 20px;
-}
-
-.boton-eliminar:hover {
-    cursor: pointer;
-}
-
-.boton-eliminar:focus {
-    outline: none;
-}
+  }
+  
+  #filtroTalle option {
+    font-size: 16px;
+  }
+  

@@ -15,5 +15,5 @@ let stockProductos = [
     { id: 20, nombre: "Wrangler", tipo: "pantalon", cantidad: 1, desc: "Jean Wrangler", precio: 32000, talle: "L", img: './img/wrangler.webp' },
     { id: 21, nombre: "Airborn", tipo: "pantalon", cantidad: 1, desc: "Jean Airborn chupin", precio: 23000, talle: "M", img: './img/airborn.webp' },
     { id: 22, nombre: "Brooksfield", tipo: "pantalon", cantidad: 1, desc: "Jean Brooksfield azul oscuro", precio: 56000, talle: "M", img: './img/brooksfield.webp' },
-   
+
 ]
