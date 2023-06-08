@@ -109,7 +109,9 @@ p {
 .modal-carrito {
     position: relative;
     background-color: white;
-    min-width: 500px;
+    min-width: 300px; /* Adjust the min-width for smaller screens */
+    max-width: 80%; /* Add a max-width to prevent the modal from becoming too wide */
+    width: 90%; /* Set a specific width to maintain consistency on different screens */
     padding: 20px;
     margin-top: -100%;
     transition: all .5s;
@@ -146,6 +148,20 @@ p {
     padding-top: 10px;
 }
 
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .modal-carrito {
+        min-width: 250px; /* Adjust the min-width for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .modal-carrito {
+        min-width: 200px; /* Adjust the min-width for smaller screens */
+    }
+}
+
+
 @media only screen and (max-width: 768px) {
     header {
         padding: 20px 5%;
@@ -172,17 +188,16 @@ p {
 
 .container {
     margin-bottom: 20px;
-  }
-  
-  #filtroTalle {
+}
+
+#filtroTalle {
     padding: 10px;
     font-size: 16px;
     border: 1px solid #ccc;
     border-radius: 5px;
     background-color: white;
-  }
-  
-  #filtroTalle option {
+}
+
+#filtroTalle option {
     font-size: 16px;
-  }
-  
+}
